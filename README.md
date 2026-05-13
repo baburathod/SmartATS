@@ -1,6 +1,6 @@
 # SmartATS – AI-Assisted Applicant Tracking System
 
-![SmartATS Banner](https://via.placeholder.com/1200x400.png?text=SmartATS+-+Next-Gen+Recruitment)
+![SmartATS Banner](public/banner.png)
 
 ## 📌 Project Overview
 SmartATS is a modern, production-ready full-stack Applicant Tracking System designed to help recruiters find top talent and empower candidates to land their dream roles. It features dynamic role-based dashboards, secure authentication, and an integrated Google Gemini AI engine to objectively score candidates against job descriptions.

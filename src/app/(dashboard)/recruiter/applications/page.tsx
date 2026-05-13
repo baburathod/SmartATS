@@ -6,7 +6,7 @@ import { Loader2, Search, Eye } from "lucide-react";
 
 export default function ApplicationsPage() {
   const { data: session } = useSession();
-  const [applications, setApplications] = useState([]);
+  const [applications, setApplications] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
