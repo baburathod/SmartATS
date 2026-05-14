@@ -1,6 +1,6 @@
 # SmartATS – AI-Assisted Applicant Tracking System
 
-![SmartATS Banner](public/banner.png)
+🚀 **Live Server / Demo:** [https://smart-ats-two.vercel.app](https://smart-ats-two.vercel.app)
 
 ## 📌 Project Overview
 SmartATS is a modern, production-ready full-stack Applicant Tracking System designed to help recruiters find top talent and empower candidates to land their dream roles. It features dynamic role-based dashboards, secure authentication, and an integrated Google Gemini AI engine to objectively score candidates against job descriptions.
@@ -16,38 +16,18 @@ SmartATS is a modern, production-ready full-stack Applicant Tracking System desi
 ## 🛠️ Tech Stack
 * **Frontend:** Next.js 15 (App Router), React, Tailwind CSS, Lucide Icons, React Hot Toast
 * **Backend:** Next.js Route Handlers (REST APIs)
-* **Database:** MongoDB & Mongoose ORM
-* **Authentication:** NextAuth.js v5
+* **Database:** MongoDB Atlas & Mongoose ORM
+* **Authentication:** NextAuth.js v4 (JWT Strategy)
 * **AI Integration:** Google Generative AI (Gemini 1.5 Flash)
 * **Language:** TypeScript
-
-## 📂 Folder Structure
-```
-smartats/
-├── src/
-│   ├── app/
-│   │   ├── (auth)/             # Login & Register Pages
-│   │   ├── (dashboard)/        # Recruiter & Candidate Dashboards
-│   │   ├── api/                # REST API Routes (Jobs, Auth, Applications, AI)
-│   │   ├── globals.css         # Global Tailwind Directives
-│   │   ├── layout.tsx          # Root Layout & Session Provider
-│   │   └── page.tsx            # Main Landing Page
-│   ├── components/             # Reusable UI Components (Navbar, etc.)
-│   ├── lib/                    # Utilities (MongoDB Connection, Auth Options)
-│   └── models/                 # Mongoose Schemas (User, Job, Application)
-├── public/                     # Static Assets
-├── .env.local                  # Environment Variables
-├── next.config.mjs             # Next.js Configuration
-├── tailwind.config.ts          # Tailwind Configuration
-└── package.json                # Project Dependencies
-```
+* **Deployment:** Vercel
 
 ## 🚀 Installation Steps
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd smartats
+   git clone https://github.com/baburathod/SmartATS.git
+   cd SmartATS/smartats
    ```
 
 2. **Install dependencies**
@@ -65,8 +45,8 @@ smartats/
 Create a `.env.local` file in the root directory and add the following:
 
 ```env
-# MongoDB Connection String (Local or Atlas)
-MONGODB_URI=mongodb://localhost:27017/smartats
+# MongoDB Connection String (Atlas)
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/smartats
 
 # NextAuth Secret (Generate a strong random string)
 NEXTAUTH_SECRET=your_super_secret_string_here
@@ -94,19 +74,8 @@ SmartATS utilizes the `gemini-1.5-flash` model to analyze qualitative data. When
 * **Context Anchoring:** The AI is strictly fed only the database values (Candidate Skills vs Job Description) and is instructed not to make external assumptions.
 * **Deterministic Parsing:** The `responseMimeType: "application/json"` configuration forces the model to adhere to a rigid schema, preventing syntax errors in the backend parser.
 
-## 📸 Screenshots
-*(Add your application screenshots here)*
-* Landing Page
-* Recruiter Application Table
-* AI Analysis Result
-* Candidate Application Tracker
-
-## 🌍 Deployment Steps
-1. Create a free **MongoDB Atlas** cluster and update your `MONGODB_URI` environment variable.
-2. Push your code to **GitHub**.
-3. Log in to [Vercel](https://vercel.com/) and create a new project from your GitHub repository.
-4. Add all environment variables from your `.env.local` into the Vercel project settings.
-5. Click **Deploy**. Vercel will automatically build and host your Next.js application.
+## 🌍 Deployment
+This project is officially deployed on Vercel. Continuous deployment is configured with the GitHub repository. To update the live server, simply commit and push your code to the `main` branch.
 
 ## 🔮 Future Improvements
 * Add AWS S3 / Cloudinary for actual PDF resume uploads.
@@ -115,4 +84,4 @@ SmartATS utilizes the `gemini-1.5-flash` model to analyze qualitative data. When
 * Add comprehensive unit testing using Jest and React Testing Library.
 
 ---
-*Built by a Senior Full-Stack Engineer for the future of recruitment.*
+*Built by Ramavath Babu for the future of recruitment.*
